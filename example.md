@@ -1,6 +1,8 @@
 ---
 layout: default
-title: Beispiel
+title: Example
 ---
 
+# Example
 
+To be done.

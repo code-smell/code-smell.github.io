@@ -3,7 +3,7 @@ layout: default
 title: Installation
 ---
 
-# Jenkins Server installieren und konfigurieren
+# Installation
 
 ## Globale Tools installieren
 
