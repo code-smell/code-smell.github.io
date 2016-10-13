@@ -13,7 +13,7 @@ Why is Continuous Integration for web projects so important? The answer is that 
 
 In this project I'm going to guide you through the installation and configuration process. Simply follow these steps to get started:
 
-1. Install the required Jenkins plugins and PHP tools
+1. Install the recommended Jenkins plugins and PHP tools
 2. Orchestrate the PHP tools using Apache Ant (or Phing)
 3. Configure the PHP tools for use with Jenkins job template
 4. Create a Jenkins job for your PHP project

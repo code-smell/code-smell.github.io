@@ -21,7 +21,7 @@ You should have a version control system like [Git][git] or [Apache Subversion][
 
 The installation of [Jenkins][jenkins] is straight forward. After finishing the installation process you can access Jenkins' web backend with `http://localhost:8080/`.
 
-## Required Jenkins Plugins
+## Recommended Jenkins Plugins
 
 You need to install the following plugins for Jenkins.
 
@@ -40,7 +40,7 @@ You need to install the following plugins for Jenkins.
 
 You can install these plugins by using the web frontend or [Jenkins CLI client][jkCLI].
 
-## Required PHP Tools
+## Recommended PHP Tools
 
 You need to install the following PHP tools.
 
