@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deployment with Deployer
+title: PHP Deployment with Deployer
 ---
 
 To be done.

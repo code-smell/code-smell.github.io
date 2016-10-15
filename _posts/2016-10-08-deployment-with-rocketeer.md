@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deployment with Rocketeer
+title: PHP Deployment with Rocketeer
 ---
 
 To be done.
