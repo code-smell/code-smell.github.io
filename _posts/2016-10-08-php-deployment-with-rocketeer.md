@@ -13,10 +13,10 @@ Rocketeer provides a handful of built-in tasks to deploy and manage your remote 
 
 Two configuration options are essential when deploying with Rocketeer.
 
-The `root_folder` on your server – this folder is Rocketeer's little self-contained world: whatever it does will be in that folder. 
+The `root_directory` on your server – this folder is Rocketeer's little self-contained world: whatever it does will be in that folder. 
 And the `application_name` - this is to let Rocketeer handle multiple applications on the same server.
 
-If per example your `root_folder` is `/var/www/` and your `application_name` is `webapp`, then Rocketeer will create `/var/www/webapp/` and everything it does will happen in that folder.
+If per example your `root_directory` is `/var/www/` and your `application_name` is `webapp`, then Rocketeer will create `/var/www/webapp/` and everything it does will happen in that folder.
 
 ## How it works
 
@@ -51,20 +51,28 @@ In order to work you must have Git installed on your machine.
 ### 1. Clone repository 
 
     $ git clone https://github.com/code-smell/php-deploy-rocketeer.git
+        
+### 2. Install Rocketeer
+        
+    $ cd php-deploy-rocketeer
+    $ php composer.phar install            
     
-### 2. Edit configuration
+### 3. Edit configuration
 
-In file `rocketeer/config.php` edit the following entries:
+In file `rocketeer/remote.php` edit the following line:
+    
+    'root_directory' => 'your_root_directory',
+
+In file `rocketeer/config.php` edit the following lines:
 
     'host'      => 'your_host',
     'username'  => 'your_username',
     'password'  => 'your_password',
     
-And in file `rocketeer/remote.php` edit the following line:
+If you leave the entries above empty, you will be asked by Rocketeer.     
     
-    'root_directory' => 'your_root_directory',
     
-### 3. Deploy application
+### 4. Deploy application
     
 Now, you are ready to deploy. 
     
@@ -73,10 +81,10 @@ Now, you are ready to deploy.
     
 You can skip the next to questions asked by Rocketeer.
     
-### 4. Open website
+### 5. Open website
 
-Depending on your remote server configuration you can access the mini PHP application by
-typing 
+Depending on your remote server configuration you can access the PHP application by
+typing: 
 
     http://your-webserver.test/
 
@@ -87,5 +95,5 @@ The output should be something like this:
 
 ## What's next
 
-Of course this was only a simple example. There is no database or a complex web application structure. But it shows that 
-deploying with Rocketeer is really easy.
+Of course, this was only a simple example. There is nor a database nor a complex structure in this
+application . But it cleary shows that deploying with Rocketeer is quite easy. Now it's up to you.
