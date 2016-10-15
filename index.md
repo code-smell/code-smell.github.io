@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Template for Jenkins Jobs for PHP Projects
+title: Latest Articles
 ---
 
-# Latest Posts
+# Latest Articles
 
 <ul>
   {% for post in site.posts %}
