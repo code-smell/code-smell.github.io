@@ -7,5 +7,5 @@ title: Support
 
 ## Issues
 
-Please report issues on [GitHub](https://github.com/php-jenkins/template/issues).
+Please report issues on [GitHub](https://github.com/php-jenkins/job-template/issues){:target="_blank"}.
 
