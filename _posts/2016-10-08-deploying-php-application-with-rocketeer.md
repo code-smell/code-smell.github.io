@@ -59,18 +59,19 @@ In order to work you must have Git installed on your machine.
     
 ### 3. Edit configuration
 
-In file `rocketeer/remote.php` edit the following line:
+In file `.rocketeer/remote.php` edit the following line:
     
     'root_directory' => 'your_root_directory',
 
-In file `rocketeer/config.php` edit the following lines:
+In file `.rocketeer/config.php` edit the following lines:
 
     'host'      => 'your_host',
     'username'  => 'your_username',
     'password'  => 'your_password',
     
-If you leave the entries above empty, you will be asked by Rocketeer.     
-    
+If you leave the entries above empty, you will be asked by Rocketeer.
+     
+Please note that the folder `.rocketeer` is hidden and therefore is not visible in your file explorer.
     
 ### 4. Deploy application
     
@@ -92,8 +93,7 @@ The output should be something like this:
 
     Rocketeer Release 20161015175630.
     
-
 ## What's next
 
-Of course, this was only a simple example. There is nor a database nor a complex structure in this
-application . But it cleary shows that deploying with Rocketeer is quite easy. Now it's up to you.
+Of course, this was only a simple example. There isn't a database nor a complex structure in this
+application. But it clearly shows that deploying with Rocketeer is quite easy. Now it's up to you.

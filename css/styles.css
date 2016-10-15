@@ -58,10 +58,12 @@ pre {
     margin:1.4em 0;
     background-color:#E6E6E6;
 }
-
 code {
     padding:0.1em 0.2em;
     background-color:#E6E6E6;
+}
+pre code {
+    padding:0;
 }
 
 /* Container */
