@@ -13,8 +13,8 @@ Please refer to the Git repository on [GitHub][repository]{:target="_blank"}.
 In order to work the following requirements have to be installed properly.
 
 - [Git][git]{:target="_blank"} - a distributed version control system 
-- [Composer][composer]{:target="_blank"} - Dependency Manager for PHP
 - [Apache Ant][ant]{:target="_blank"} - a command-line build tool
+- [Composer][composer]{:target="_blank"} - Dependency Manager for PHP
                                            
 Please refer to the appropriate documention which guides you through the installation process.
 
@@ -26,36 +26,13 @@ Use the following commands to clone the project to your local machine and change
 $ git clone https://github.com/code-smell/php-automate-build-ant.git my-project
 $ cd my-project
 ~~~
-
-## Composer
-
-Composer plays a major role in this game. It installs all PHP dependencies defined in `composer.json`. 
-We have added the `composer.phar` PHP Archive to the repository to have Composer available per default.
-
-To install all dependencies, just run the following command.
-
-~~~bash
-php composer.phar install
-~~~
-
-The following PHP tools are availbalbe now. The related binaries are stored under `vendor/bin`.
-    
-- [PHP_CodeSniffer][PhpCodeSniffer]{:target="_blank"} tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
-- [PHPUnit][PhpUnit]{:target="_blank"} is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
-- [PHP Copy/Paste Detector][PhpCpd]{:target="_blank"} is a Copy/Paste Detector (CPD) for PHP code.
-- [phpDox][PhpDox]{:target="_blank"} - PHP Documentation Generator is a documentation generator for PHP projects. This includes, but is not limited to, API documentation.
-- [PhpDepend][PhpDepend]{:target="_blank"} can generate a large set of software metrics from a given code base. These values can be used to measure the quality of a software project and to identify the parts of an application where a refactoring should be applied.
-- [PHPLoc][PhpLoc]{:target="_blank"} - PHPLOC is a tool for quickly measuring the size of a PHP project.
-- [PHPMD][PhpMd]{:target="_blank"} - PHP Mess Detector is a source code analyzer.
-
-The `build.xml` script includes a target with the same name which is invoked first when initiating one of the main targets (see below).
-    
+   
 ## Apache Ant - Build Script
     
 The project is set up and ready for Ant to automate. Ant orchestrates the execution of several software quality and 
 metric tools defined in the `build.xml` build script like:
 
-- Install the defined PHP dependencies using Composer 
+- Download Composer PHP Archive and install PHP dependencies using Composer 
 - Perform syntax check of PHP sourcecode files using php's lint-mode
 - Measure project size using PHPLOC
 - Calculate software metrics using PHP_Depend
@@ -280,6 +257,28 @@ The `build.xml` script is stored in the root folder.
 </project>
 ~~~
 
+## Composer
+
+Composer is the package manager for PHP and plays a major role in this game. It installs all PHP dependencies defined 
+in `composer.json`. The `build.xml` script includes a target named by `composer` which is invoked first when initiating 
+one of the main targets (see below).
+
+You can invoke the `composer` target manually to download Composer as a PHP Archive and install all PHP dependencies.
+
+~~~bash
+$ ant composer
+~~~
+
+The following PHP tools are available now. The related binaries are stored under `vendor/bin`.
+    
+- [PHP_CodeSniffer][PhpCodeSniffer]{:target="_blank"} tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
+- [PHPUnit][PhpUnit]{:target="_blank"} is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
+- [PHP Copy/Paste Detector][PhpCpd]{:target="_blank"} is a Copy/Paste Detector (CPD) for PHP code.
+- [phpDox][PhpDox]{:target="_blank"} - PHP Documentation Generator is a documentation generator for PHP projects. This includes, but is not limited to, API documentation.
+- [PhpDepend][PhpDepend]{:target="_blank"} can generate a large set of software metrics from a given code base. These values can be used to measure the quality of a software project and to identify the parts of an application where a refactoring should be applied.
+- [PHPLoc][PhpLoc]{:target="_blank"} - PHPLOC is a tool for quickly measuring the size of a PHP project.
+- [PHPMD][PhpMd]{:target="_blank"} - PHP Mess Detector is a source code analyzer.
+ 
 ## Configure PHP tools
 
 The build script assumes that the following sets are located in the `build` folder. Of course we could put everything into one file, but by dividing the configuration we make the files more readable by human.
@@ -386,11 +385,11 @@ Main targets:
 - `full-build` - Perform static analysis, run tests, and generate project documentation.
 - `quick-build` - Perform lint check and run tests without generating code coverage reports.
 - `static-analysis` - Perform static analysis.
+- `composer` - Install composer packages including require-dev.
 
 Sub targets:
 
 - `clean` - Cleanup build artifacts.
-- `composer` - Install composer packages including require-dev.
 - `lint` - Perform syntax check of PHP sourcecode files.
 - `pdepend` - Calculate software metrics using PHP_Depend and log result in XML format. Intended for usage within a continuous integration environment.
 - `phpcpd` - Find duplicate code using PHPCPD and print human readable output. Intended for usage on the command line before committing.
