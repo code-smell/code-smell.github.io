@@ -4,10 +4,9 @@ title: Automating build process of a PHP Application with Apache Ant
 ---
 
 Apache Ant is a software tool for automating software build processes. It is implemented using the Java language, 
-requires the Java platform, and is best suited to building Java projects. 
+requires the Java platform, and is best suited to building Java projects. In this article we are using Ant to automate the build process of a PHP application. 
 
-In this article we are using Ant to automate the build process of a PHP application. Please refer to the Git repository 
-on [GitHub][repository]{:target="_blank"}.
+Please refer to the Git repository on [GitHub][repository]{:target="_blank"}.
 
 ## Requirements
 
