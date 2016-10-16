@@ -1,5 +1,5 @@
-# Template for Jenkins for PHP Projects
+# GitHub Pages for Code Smell website
 
-The goal of this project is to provide a standard template for Jenkins jobs for PHP projects.
+> “Code smell, also known as bad smell, in computer programming code, refers to any symptom in the source code of a program that possibly indicates a deeper problem.”
 
 <https://code-smell.github.io>
