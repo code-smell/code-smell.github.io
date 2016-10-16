@@ -20,7 +20,7 @@ If per example your `root_directory` is `/var/www/` and your `application_name` 
 
 ## How it works
 
-In the working folder mentioned above Rocketeer will create three folders.
+In the working folder mentioned above on the server Rocketeer will create three folders.
 
 - `releases` is where the history of your application is stored. 
 - `current` is where the **latest** version of your application will always be. This is a **symlink** pointing to one of the releases in the `releases` folder.
