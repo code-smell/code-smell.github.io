@@ -80,7 +80,14 @@ Now, you are ready to deploy.
     $ cd php-deploy-rocketeer
     $ php vendor/bin/rocketeer deploy
     
-You can skip the next to questions asked by Rocketeer.
+You can skip the questions about the repository username and password asked by Rocketeer. After finishing you can 
+display the current release. 
+
+    $ php vendor/bin/rocketeer current
+    
+To list the available commands use the following command.
+
+    $ php vendor/bin/rocketeer list
     
 ### 5. Open website
 
@@ -91,7 +98,7 @@ typing:
 
 The output should be something like this:
 
-    Rocketeer Release 20161015175630.
+    Rocketeer Release 20161015204946.        
     
 ## What's next
 
