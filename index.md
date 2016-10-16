@@ -5,7 +5,7 @@ title: Latest Articles
 
 # Latest Articles
 
-<ul>
+<ul class="posts">
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>

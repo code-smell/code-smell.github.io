@@ -50,6 +50,12 @@ p + ul {
     margin-top: -0.5em;
 }
 
+ul.posts {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 table {
     margin-bottom: 2.6em;
     font-size: 0.88em;
