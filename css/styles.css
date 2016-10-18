@@ -95,10 +95,15 @@ pre code {
     font-size: 1.2em;
     padding: 0;
     font-weight: bold;
+    line-height:40px;
 }
 
-.pure-menu-heading span {
-    font-weight: normal;
+.pure-menu-heading img {
+    display:inline-block;
+    float:left;
+    width:40px;
+    height:40px;
+    padding-right:0.5em;
 }
 
 .header {
