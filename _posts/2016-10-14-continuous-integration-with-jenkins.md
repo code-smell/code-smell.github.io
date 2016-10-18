@@ -35,6 +35,18 @@ Before you can walk through this article you **must** have read the depending ar
 
 ---
 
+# A simple workflow
+
+A simplified Continuous Integration workflow based on Jenkins CI follows these steps.
+
+<img class="pure-img" src="/img/php-workflow-with-jenkins.png" alt="a simplified Continuous Integration workflow">
+
+1. The Continuous Integration Server like Jenkins CI starts the build process of Apache Ant. This process is invoked by a commit to the Git repo for example.
+2. Apache Ant first downloads the Composer PHP-Archive and starts the install process of Composer.
+3. Composer installs all PHP-Libraries that are listed in the config file like PHPUnit, PHPCS, Pdepend or PhpDox.
+4. Apache Ant loops through the PHP-Tools and executes them, writes different Logfiles and prints out messages to the CLI.
+5. The Continuous Integration Server processes the different logfiles, prints them out in a human readable format and creates some graphics. Furthermore it informs project members by e-mail about the build status.
+
 # Install recommended Jenkins plugins
 {:id="install"}
 

@@ -18,6 +18,17 @@ In order to work the following requirements have to be installed properly.
                                            
 Please refer to the appropriate documention which guides you through the installation process.
 
+## The workflow
+
+A simplified PHP build process workflow follows looks like this.
+
+<img class="pure-img" src="/img/php-workflow-with-ant.png" alt="a simplified PHP build process">
+
+1. The build process is invoked manually on the command line CLI for example.
+2. Apache Ant first downloads the Composer PHP-Archive and starts the install process of Composer.
+3. Composer installs all PHP-Libraries that are listed in the config file like PHPUnit, PHPCS, Pdepend or PhpDox.
+4. Apache Ant loops through the PHP-Tools and executes them, writes Logfiles and prints out human readable messages to the CLI.
+
 ## Git
 
 Use the following commands to clone the project to your local machine and change to the project directory. 
